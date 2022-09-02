@@ -83,25 +83,27 @@ namespace login_autenticacao.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpPost, Route("login")]
         //dynamic: as vezes retorna usuario e as vezes nao retorna nada
-        public async Task<ActionResult<dynamic>> Authenticate([FromBody] Usuario model)
+        public async Task<ActionResult<dynamic>> Login([FromBody] Usuario model)
         {
-            var user = await _context.Usuarios
+
+            var usuario = await _context.Usuarios
                 .AsNoTracking()
                 .Where(x => x.Username == model.Username && x.Password == model.Password)
                 .FirstOrDefaultAsync();
 
-            if (user == null)
+            if (usuario == null)
                 return NotFound(new { message = "Usuário ou senha inválidos" });
 
-            var token = TokenService.GenerateToken(user);
+            var token = TokenService.GenerateToken(usuario);
 
             //esconde senha
-            user.Password = "";
+            usuario.Password = "";
             return new
             {
-                user = user,
+                usuario = usuario,
                 token = token
             };
         }

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeradorDeApostas", "Gerador
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "login-autenticacao", "..\login-autenticacao\login-autenticacao.csproj", "{1E2D1849-C1D9-4940-9C05-FD9DA3CA7031}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSenha", "..\HashSenha\HashSenha.csproj", "{785A24E7-4214-44F2-8530-B7365841C3D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1E2D1849-C1D9-4940-9C05-FD9DA3CA7031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E2D1849-C1D9-4940-9C05-FD9DA3CA7031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E2D1849-C1D9-4940-9C05-FD9DA3CA7031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{785A24E7-4214-44F2-8530-B7365841C3D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785A24E7-4214-44F2-8530-B7365841C3D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785A24E7-4214-44F2-8530-B7365841C3D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785A24E7-4214-44F2-8530-B7365841C3D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
